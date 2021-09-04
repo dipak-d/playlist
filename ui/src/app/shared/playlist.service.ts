@@ -8,7 +8,7 @@ import { Observable, throwError } from 'rxjs'
 })
 export class PlaylistService {
   endpoint =
-    'https://rwr2jn4ej1.execute-api.ap-south-1.amazonaws.com/Dev/playlist'
+    'https://<API endpoint>/Dev/playlist'
 
   constructor (private http: HttpClient) {}
 
