@@ -1,0 +1,41 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img width="40" alt="Playlist Logo" src="assets/images/playlist.svg" />
+  <span>Welcome to the playlist</span>
+  <div class="spacer"></div>
+</div>
+
+<div class="content" role="main">
+  <div class="card-container">
+    <h1>Angular 11 Datatables Example - Tutsmake.com</h1>
+    <table datatable [dtOptions]="dtOptions" class="row-border hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Class</th>
+          <th>Duration_ms</th>
+          <th>Energy</th>
+          <th>Key</th>
+          <th>Mode</th>
+          <th>Valence</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let playlist of playlists">
+          <td>{{ playlist.id }}</td>
+          <td>{{ playlist.title }}</td>
+          <td>{{ playlist.class }}</td>
+          <td>{{ playlist.duration_ms }}</td>
+          <td>{{ playlist.energy }}</td>
+          <td>{{ playlist.key }}</td>
+          <td>{{ playlist.mode }}</td>
+          <td>{{ playlist.valence }}</td>
+          <td>{{ playlist.star_rating }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<router-outlet></router-outlet>
